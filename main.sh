@@ -38,6 +38,7 @@ read -p $'\e[1m\e[33m\n Qual é seu \e[33mnome para o \e[31mBanner\e[32m: ' varb
 read -p $'\n\e[1m\e[33m Qual é sue nome para o Cowsay\e[32m: ' varcowsay
 shell=".bashrc"
 [[ "${SHELL}" == "zsh" ]] && shell=".zshrc"
+>> /data/data/com.termux/files/usr/etc/motd
 echo -e "clear\ncowsay -f eyes \"$varcowsay\" | lolcat\ntoilet -f big '$varbanner' -F gay | lolcat" >"$HOME/${shell}Banner.sh"
 [[ -f ".okay" ]] || (echo "source \$HOME/${shell}Banner.sh" >>"$HOME/${shell}" && touch ".okay")
 
