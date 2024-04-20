@@ -26,7 +26,7 @@ for i in "figlet" "toilet" "cowsay" "ruby"; do
   printf "\e[1;34m  Instalando \e[1;36m${i^}\e[m\n"
   pkg install -y "${i}" &>/dev/null
 done
-[[ -f ".okay" ]] || (printf "\e[1;34m  Instalando \e[1;36mlolcat\e[m\n" || gem install lolcat &>/dev/null)
+[[ -f ".okay" ]] || (printf "\e[1;34m  Instalando \e[1;36mlolcat\e[m\n" && gem install lolcat &>/dev/null)
 figlet -f big Done !!! | lolcat
 printf "\n\n\e[1m\e[32mDesenvolvido Por:\e[33m Mike Edwards (90s15)\n\n"
 sleep 2
